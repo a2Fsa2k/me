@@ -3,8 +3,10 @@ import { StaticImageData } from "next/image";
 import Image from "next/image";
 import styles from "./Carousel.module.css";
 import Spinner from "components/Spinner/Spinner";
+import { GalleryItem } from "@/types";
+
 interface Props {
-  images: StaticImageData[];
+  images: (StaticImageData | GalleryItem)[];
 }
 
 const Carousel = ({ images }: Props) => {
@@ -30,15 +32,29 @@ const Carousel = ({ images }: Props) => {
     setIsLoading(false);
   };
 
+  const currentItem = images[currentImage];
+  const isVideo = typeof currentItem === 'object' && 'type' in currentItem && currentItem.type === 'video';
+
   return (
     <div className={styles.carousel}>
-      {isLoading && <Spinner />}
+      {isLoading && !isVideo && <Spinner />}
       <div className={styles.imageContainer}>
-        <Image
-          src={images[currentImage]}
-          alt="carousel"
-          onLoadingComplete={handleLoadingComplete}
-        />
+        {isVideo ? (
+          <video
+            src={typeof currentItem === 'object' && 'src' in currentItem ? currentItem.src as string : ''}
+            controls
+            autoPlay
+            loop
+            muted
+            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+          />
+        ) : (
+          <Image
+            src={typeof currentItem === 'object' && 'src' in currentItem ? currentItem.src as StaticImageData : currentItem as StaticImageData}
+            alt="carousel"
+            onLoadingComplete={handleLoadingComplete}
+          />
+        )}
       </div>
       <div className={styles.controls}>
         <div

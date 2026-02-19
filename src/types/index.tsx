@@ -52,12 +52,17 @@ export type WorkFile = {
   content: WorkContent;
 };
 
+export type GalleryItem = {
+  type: 'image' | 'video';
+  src: StaticImageData | string;
+};
+
 export type WorkContent = {
   id: number;
   title: string;
   date: string;
   gitURL: string;
-  gallery: StaticImageData[];
+  gallery: (StaticImageData | GalleryItem)[];
   techstack: string[];
   overview: string;
 };

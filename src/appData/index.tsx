@@ -70,6 +70,9 @@ import mr2 from "../../assets/mr2.jpg";
 import mrIcon from "../../assets/mr_icon.png";
 import MS from "../../assets/work/MS.png";
 import MS2 from "../../assets/work/MS2.png";
+import askmyvault_graph from "../../assets/graph-view.png";
+import askmyvault_main from "../../assets/askmyvault2.png";
+import askmyvault_settings from "../../assets/settings.png";
 import col1 from "../../assets/gallery/0.webp";
 import col2 from "../../assets/gallery/1.webp";
 import col3 from "../../assets/gallery/2.webp";
@@ -272,7 +275,7 @@ export const WorkData = [
     date: "2024",
     gitURL: "https://github.com/a2Fsa2k/AnuGPT",
     techstack: [TechIcon.CPP, TechIcon.CUDA],
-    gallery: [],
+    gallery: [{ type: 'video' as const, src: '/anuGPT.mp4' }],
     overview: `Built a from-scratch GPT-style transformer in pure C++ and CUDA, covering both training and inference 
     without ML frameworks. Trained a ~10M parameter model locally, achieving ~45 tokens/sec inference. This project 
     involved implementing attention mechanisms, tensor operations, and efficient GPU kernels from the ground up, 
@@ -284,7 +287,7 @@ export const WorkData = [
     date: "2024",
     gitURL: "https://github.com/a2Fsa2k/barter",
     techstack: [TechIcon.GO],
-    gallery: [],
+    gallery: [{ type: 'video' as const, src: '/barter.mp4' }],
     overview: `Built an offline peer-to-peer payment system enabling wallet-to-wallet transfers over local networks 
     without servers or internet connectivity. Engineered concurrent networking and cryptographic primitives (Ed25519 
     identities, signed transactions, hash-chained local ledger) using Go. This project demonstrates distributed 
@@ -307,7 +310,7 @@ export const WorkData = [
     date: "2024",
     gitURL: "https://github.com/a2Fsa2k/obsidian-askmyvault",
     techstack: [TechIcon.TYPESCRIPT, TechIcon.PYTHON, TechIcon.CHROMADB, TechIcon.FASTAPI, TechIcon.TRANSFORMERS],
-    gallery: [],
+    gallery: [askmyvault_graph, askmyvault_main, askmyvault_settings],
     overview: `Contributed to a local-first RAG system enabling semantic querying of Markdown notes with grounded 
     answers and file-level citations inside Obsidian. Designed incremental embedding and retrieval pipelines using 
     sentence-transformers (MiniLM), ChromaDB, FastAPI, and multi-provider LLM integrations. This plugin enhances 
