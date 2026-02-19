@@ -1,54 +1,6 @@
-# 🖥️ Omkar Bhor's Windows XP Portfolio
+# Windows XP Portfolio
 
-A nostalgic Windows XP-themed personal portfolio website built with Next.js, featuring an authentic retro interface with modern functionality.
-
-## 🎯 About Me
-
-Hi! I'm **Omkar Bhor**, a Computer Science Engineering student at PCET's Nutan College of Engineering and Research (NCER) in Pune, India. 
-
-I'm passionate about:
-- 🦀 **Rust & Systems Programming**
-- 🧠 **Operating Systems & Compilers** 
-- 🎮 **GPU Programming**
-- 🤖 **AI/ML & Deep Learning**
-- 📊 **Data Structures & Algorithms**
-- 🛠️ **Building Developer Tools**
-
-## ✨ Features
-
-- 🖱️ **Draggable Windows** - Authentic Windows XP window management
-- 🎨 **Retro UI/UX** - Pixel-perfect Windows XP styling  
-- 📱 **Responsive Design** - Works on all devices
-- 📧 **Contact Form** - Functional email system with Mailgun
-- 🖼️ **Photo Gallery** - Showcase personal photography
-- 💼 **Project Portfolio** - Detailed project showcases
-- 🎵 **Nostalgic Sounds** - Classic Windows XP audio cues
-
-## 🚀 Tech Stack
-
-- **Frontend**: Next.js 15, TypeScript, React 18
-- **Styling**: CSS Modules, XP.css
-- **State Management**: Redux Toolkit  
-- **UI Components**: React Draggable, React Resizable
-- **Email**: Mailgun API
-- **Deployment**: Vercel
-- **Analytics**: Vercel Analytics
-
-## 🏗️ Getting Started
-
-```bash
-# Clone the repository
-git clone https://github.com/urngmi/me.git
-
-# Navigate to project directory
-cd me
-
-# Install dependencies  
-npm install
-
-# Start development server
-npm run dev
-```
+A nostalgic Windows XP-themed personal portfolio website built with Next.js.
 
 Visit `http://localhost:3000` to see the website in action!
 
